@@ -37,3 +37,6 @@ Functioning similarly to Pi-hole, this Python-based application intercepts DNS q
 ### Step 1: Clone the Repository
 git clone [https://github.com/yourusername/dns-shield.git](https://github.com/Nilesh-acc-commits/DNS-Network-security-filter)
 
+
+!!Save the index.html in a separate templates directory in the dns_filter directory!!
+dns_filter/templates/index.html
