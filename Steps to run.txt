@@ -1,0 +1,6 @@
+1. Open terminal in the directory
+2. run "python dns_filter.py"
+3. open localhost:5000 on your browser
+4. voila! you got your dns filter 
+
+It will now track the data you are processing and will lead to a secure browsing from your end.

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DNS Security Filter</title>
+    <style>
+        body { font-family: sans-serif; background: #f4f4f9; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        h1 { text-align: center; color: #333; }
+        .stats { display: flex; justify-content: space-around; margin-bottom: 20px; }
+        .stat-box { text-align: center; padding: 15px; background: #eee; border-radius: 5px; width: 30%; }
+        .stat-number { font-size: 24px; font-weight: bold; color: #007bff; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 10px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background-color: #f8f8f8; }
+        .BLOCKED { color: red; font-weight: bold; }
+        .ALLOWED { color: green; font-weight: bold; }
+    </style>
+    <script>
+        function fetchStats() {
+            fetch('/api/stats')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('total').innerText = data.total_queries;
+                    document.getElementById('blocked').innerText = data.blocked;
+                    document.getElementById('allowed').innerText = data.allowed;
+                    
+                    const tbody = document.getElementById('log-table');
+                    tbody.innerHTML = '';
+                    data.recent_logs.forEach(log => {
+                        const row = `<tr><td>${log.time}</td><td>${log.domain}</td><td class="${log.status}">${log.status}</td></tr>`;
+                        tbody.innerHTML += row;
+                    });
+                });
+        }
+        setInterval(fetchStats, 2000); // Refresh every 2 seconds
+        window.onload = fetchStats;
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>🛡️ DNS Security Filter</h1>
+        <div class="stats">
+            <div class="stat-box">Total Queries<div class="stat-number" id="total">0</div></div>
+            <div class="stat-box">Blocked 🚫<div class="stat-number" id="blocked">0</div></div>
+            <div class="stat-box">Allowed ✅<div class="stat-number" id="allowed">0</div></div>
+        </div>
+        <h3>Live Traffic Log</h3>
+        <table>
+            <thead><tr><th>Time</th><th>Domain</th><th>Status</th></tr></thead>
+            <tbody id="log-table"></tbody>
+        </table>
+    </div>
+</body>
+</html>
