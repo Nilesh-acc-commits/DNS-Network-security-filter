@@ -35,6 +35,5 @@ Functioning similarly to Pi-hole, this Python-based application intercepts DNS q
 * Administrative/Root privileges (required to bind to Port 53).
 
 ### Step 1: Clone the Repository
-```bash
-git clone [https://github.com/yourusername/dns-shield.git](https://github.com/yourusername/dns-shield.git)
-cd dns-shield
+git clone [https://github.com/yourusername/dns-shield.git](https://github.com/Nilesh-acc-commits/DNS-Network-security-filter)
+
