@@ -8,10 +8,6 @@
 
 Functioning similarly to Pi-hole, this Python-based application intercepts DNS queries, compares them against a real-time threat intelligence blocklist, and sinkholes malicious requests while allowing legitimate traffic to pass through.
 
-## 📸 Dashboard Preview
-
-![Dashboard Screenshot](path/to/your/screenshot.png)
-*(Add a screenshot of your dashboard here)*
 
 ## ✨ Key Features
 
