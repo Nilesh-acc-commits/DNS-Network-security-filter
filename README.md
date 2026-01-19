@@ -1,4 +1,4 @@
-# 🛡️ DNS Shield: Python DNS Sinkhole & Ad Blocker
+ko# 🛡️ DNS Shield: Python DNS Sinkhole & Ad Blocker
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
@@ -31,7 +31,8 @@ Functioning similarly to Pi-hole, this Python-based application intercepts DNS q
 * Administrative/Root privileges (required to bind to Port 53).
 
 ### Step 1: Clone the Repository
-git clone [https://github.com/yourusername/dns-shield.git](https://github.com/Nilesh-acc-commits/DNS-Network-security-filter)
+git clone   [https://github.com/Nilesh-acc-commits/DNS-Network-security-f8pter]
+(https://github.com/Nilesh-acc-commits/DNS-Network-security-filter)
 
 
 !!Save the index.html in a separate templates directory in the dns_filter directory!!
