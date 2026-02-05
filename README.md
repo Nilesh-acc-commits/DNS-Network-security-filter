@@ -31,7 +31,7 @@ Functioning similarly to Pi-hole, this Python-based application intercepts DNS q
 * Administrative/Root privileges (required to bind to Port 53).
 
 ### Step 1: Clone the Repository
-git clone   [https://github.com/Nilesh-acc-commits/DNS-Network-security-f8pter]
+git clone   [https://github.com/Nilesh-acc-commits/DNS-Network-security-filter]
 (https://github.com/Nilesh-acc-commits/DNS-Network-security-filter)
 
 
